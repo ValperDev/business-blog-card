@@ -1,10 +1,30 @@
 :root {
+    --border-color: #efefef;
+    --dark-black: #111729;
+    --light-black: #677489;
     --light-white: #f2f5f9;
     --white: #ffffff;
 }
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: var(--light-white);
+    font-family: sans-serif;
+    min-height: 100dvh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
 }
 
 img {
@@ -15,5 +35,83 @@ img {
 .card {
     background-color: var(--white);
     border-radius: 15px;
-    max-width: 30rem;
+    max-width: 25rem;
+    margin: 1em;
+    overflow: hidden;
+}
+
+.card-content {
+    position: relative;
+}
+
+.divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: -45px;
+}
+
+.card-details {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.card__title {
+    color: var(--dark-black);
+    font-size: 1.5em;
+    line-height: 1.4;
+}
+
+.card__paragraph {
+    color: var(--light-black);
+    font-size: .95em;
+    line-height: 1.4;
+}
+
+.line-divider {
+    background-color: var(--border-color);
+    height: 1px;
+}
+
+.card-reviewer {
+    align-items: center;
+    display: flex;
+    gap: .8em;
+    padding: 2em;
+}
+
+.card__thumbnail-container {
+    width: 50px;
+    height: 50px;
+}
+
+.card__thumbnail {
+    border-radius: 50%;
+    padding: .3em;
+    background-color: var(--border-color);
+}
+
+.card-reviewer__details {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+}
+
+.card-reviewer__name,
+.card-reviewer__location {
+    display: block;
+}
+
+.card-reviewer__name {
+    color: var(--dark-black);
+    font-weight: 600;
+}
+
+.card-reviewer__location {
+    color: var(--light-black);
+    font-size: .75em;
+    font-weight: 600;
 }
