@@ -1,0 +1,19 @@
+:root {
+    --light-white: #f2f5f9;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--light-white);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 15px;
+    max-width: 30rem;
+}
